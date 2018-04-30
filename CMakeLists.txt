@@ -17,10 +17,10 @@ set( package_name "span-lite" )
 
 # Interface library:
 
-add_library(                
+add_library(
     ${package_name} INTERFACE )
-    
-target_include_directories( 
+
+target_include_directories(
     ${package_name} INTERFACE "$<BUILD_INTERFACE:${include_source_dir}>" )
 
 enable_testing()
