@@ -23,6 +23,10 @@ add_library(
 target_include_directories(
     ${package_name} INTERFACE "$<BUILD_INTERFACE:${include_source_dir}>" )
 
+install(
+    DIRECTORY "${CMAKE_CURRENT_SOURCE_DIR}/include/"
+    DESTINATION "include/" )
+
 enable_testing()
 
 if ( SPAN_LITE_OPT_BUILD_TESTS )
